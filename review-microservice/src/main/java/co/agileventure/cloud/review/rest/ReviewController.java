@@ -44,7 +44,7 @@ public class ReviewController {
         return reviewService.create(review);
     }
 
-    @RequestMapping(value = "/product/id", method = RequestMethod.GET)
+    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
     public List<Review> findByProductId(@PathVariable("id") Long id) {
         return reviewService.findAllByProductId(id);
     }
