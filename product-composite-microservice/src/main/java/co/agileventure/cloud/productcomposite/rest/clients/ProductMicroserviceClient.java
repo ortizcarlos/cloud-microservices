@@ -30,4 +30,8 @@ public class ProductMicroserviceClient {
         return null;
     }
     
+    private void getProductInfoByID(Long id) {
+        
+    }
+    
 }
