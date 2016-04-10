@@ -7,4 +7,20 @@
                 <goal>spring-boot:run</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-dockerize</actionName>
+            <displayName>dockerize</displayName>
+            <goals>
+                <goal>package</goal>
+                <goal>docker:build</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-package</actionName>
+            <displayName>package</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>package</goal>
+            </goals>
+        </action>
     </actions>

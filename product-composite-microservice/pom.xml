@@ -6,8 +6,15 @@
         <artifactId>cloud-microservices</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>product-composite-microservice</artifactId>
+    <artifactId>product-composite</artifactId>
+    <version>1.0</version>
     <packaging>jar</packaging>
+    
+     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <docker.image.prefix>carlosortizur</docker.image.prefix>
+    </properties>
     
     <dependencies>
         <dependency>
@@ -25,4 +32,31 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
     </dependencies>
+    
+     <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.2.3</version>
+                <configuration>
+                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <!--<targetPath>/</targetPath>-->
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+          
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+    
 </project>

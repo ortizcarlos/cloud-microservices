@@ -1,20 +1,15 @@
 server:
-  port: 0
+  port: 8080
 
 info:
   component: Product Composite MicroService
   
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 3
     preferIpAddress: true
-    metadataMap:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
   client:
-    # Default values comes from org.springframework.cloud.netflix.eurek.EurekaClientConfigBean
-    registryFetchIntervalSeconds: 5
-    instanceInfoReplicationIntervalSeconds: 5
-    initialInstanceInfoReplicationIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
   
   
   
