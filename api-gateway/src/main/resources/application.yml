@@ -1,0 +1,13 @@
+# Zuul-proxied services can be found by calling /services/subject, /services/verb, etc.
+zuul:
+  prefix: /services
+  
+server:
+  port: 8080
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/

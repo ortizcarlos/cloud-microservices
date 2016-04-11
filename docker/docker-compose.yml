@@ -1,0 +1,30 @@
+version: '2'
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+     - MYSQL_ROOT_PASSWORD=changeit
+    ports:
+      - "3306:3306"
+
+  discovery:
+    image: carlosortizur/eureka-server
+    restart: always
+    ports:
+      - "8761:8761"
+
+  products:
+    image: carlosortizur/product-microservice
+    restart: always
+    links:
+      - discovery
+      - mysql
+  
+  product-composite:
+    image: carlosortizur/product-composite
+    restart: always
+    links:
+      - discovery
+    ports:
+      - "8080:8080"

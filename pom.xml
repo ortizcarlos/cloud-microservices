@@ -36,6 +36,7 @@
         <module>eureka-server</module>
         <module>review-microservice</module>
         <module>product-composite-microservice</module>
+        <module>api-gateway</module>
     </modules>
     
     <properties>
