@@ -3,3 +3,4 @@ product-microservice/target/
 review-microservice/target/
 eureka-server/target/
 search-microservice/target/
+/api-gateway/target/
