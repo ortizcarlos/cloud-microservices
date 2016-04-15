@@ -1,5 +1,8 @@
 zuul:
+  ignoredServices: "*"
   prefix: /api
+  routes:
+    productcomposite: /product/**
 
   
 server:
