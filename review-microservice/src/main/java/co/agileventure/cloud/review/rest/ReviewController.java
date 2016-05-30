@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Produces(APPLICATION_JSON)
 @Consumes(APPLICATION_JSON)
 @RestController
-@RequestMapping("/review")
+@RequestMapping("/")
 public class ReviewController {
     
     private ReviewService reviewService;

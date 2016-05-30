@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
  *
  * @author Carlos
  */
-@FeignClient("REVIEW")
+@FeignClient(name = "REVIEW" ,fallback = ReviewClientFallback.class )
 public interface ReviewClient {
 
-    @RequestMapping(value = "/review/product/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
     List<Review> findByProductId(@PathVariable("id") Long id);
 
 }

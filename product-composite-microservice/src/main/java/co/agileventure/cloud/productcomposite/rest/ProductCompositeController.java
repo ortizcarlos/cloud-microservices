@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Produces(APPLICATION_JSON)
 @Consumes(APPLICATION_JSON)
-@RequestMapping("/productcomposite")
+@RequestMapping("/")
 public class ProductCompositeController {
     private ProductClient productClient;
     private ReviewClient reviewClient;

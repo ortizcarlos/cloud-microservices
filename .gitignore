@@ -4,3 +4,5 @@ review-microservice/target/
 eureka-server/target/
 search-microservice/target/
 /api-gateway/target/
+/turbine-server/target/
+/service-dashboard/target/

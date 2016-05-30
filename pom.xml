@@ -7,11 +7,23 @@
         <version>Brixton.BUILD-SNAPSHOT</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Brixton.BUILD-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <groupId>co.agileventure.cloud</groupId>
     <artifactId>cloud-microservices</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
+   
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -37,6 +49,8 @@
         <module>review-microservice</module>
         <module>product-composite-microservice</module>
         <module>api-gateway</module>
+        <module>turbine-server</module>
+        <module>service-dashboard</module>
     </modules>
     
     <properties>
