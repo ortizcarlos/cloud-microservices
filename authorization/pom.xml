@@ -6,45 +6,55 @@
         <artifactId>cloud-microservices</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>product-microservice</artifactId>
+    <artifactId>authorization</artifactId>
     <packaging>jar</packaging>
-     
+    
+    
+    <properties>   
+        <commons.io.version>2.4</commons.io.version>
+        <jjwt.version>0.6.0</jjwt.version>
+        <junit.version>4.12</junit.version>
+    </properties>
+    
+    
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
-        
+                
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         
-   
+        <!--
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.io.version}</version>
         </dependency>
-  
-        <!--                                                            
+        -->
+        
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+                       
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>2.7</version>
-        </dependency>               
-                   
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.3.2</version>
-        </dependency>   
-		
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
-        -->
-    </dependencies>
+                
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.3m</version>
+        </dependency>
+        
+    </dependencies>  
     
 </project>

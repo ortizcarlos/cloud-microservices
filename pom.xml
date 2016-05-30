@@ -51,6 +51,8 @@
         <module>api-gateway</module>
         <module>turbine-server</module>
         <module>service-dashboard</module>
+        <module>authorization</module>
+        <module>webfront</module>
     </modules>
     
     <properties>

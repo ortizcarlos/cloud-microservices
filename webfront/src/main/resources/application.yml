@@ -1,0 +1,31 @@
+        
+static:
+    resources:
+        filepath:   file:./wwwroot/
+        
+logging:
+    level:
+        org:
+            springframework:
+                web:    INFO
+
+
+server:
+  port: 8080
+  #contextPath: /webapp
+  
+
+
+spring:
+  thymeleaf:
+        cache:  false
+        prefix: file:./wwwroot/templates/    
+
+#Propiedades de  configuracion para el Message Broker
+jms:
+  cache:
+    size: 10
+
+     
+
+    

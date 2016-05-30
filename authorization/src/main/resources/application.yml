@@ -1,12 +1,11 @@
-zuul:
-#  ignoredServices: "*"
-  prefix: /api
-  routes:
-    auth: /auth/**
-
-  
 server:
-  port: 3000
+  port: 0
+
+info:
+  component: Authorization MicroService
+
+authapp:
+    secretkey: lallavemasdificil
 
 eureka:
   instance:
@@ -19,3 +18,8 @@ eureka:
     registryFetchIntervalSeconds: 5
     instanceInfoReplicationIntervalSeconds: 5
     initialInstanceInfoReplicationIntervalSeconds: 5
+
+logging:
+  level:
+    root: WARN
+    co.agileventure: INFO

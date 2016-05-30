@@ -6,3 +6,5 @@ search-microservice/target/
 /api-gateway/target/
 /turbine-server/target/
 /service-dashboard/target/
+/authorization/target/
+/webfront/target/
