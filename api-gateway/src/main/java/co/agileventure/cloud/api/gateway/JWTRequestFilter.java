@@ -48,7 +48,7 @@ public class JWTRequestFilter extends ZuulFilter {
             LOGGER.info(String.format("%s value %s ", name, request.getHeader(name)));
         }
 
-        ctx.addOriginResponseHeader("Authorization", request.getHeader("authorization"));
+        //ctx.addOriginResponseHeader("Authorization", request.getHeader("authorization"));
         ctx.addZuulRequestHeader("Authorization", request.getHeader("authorization"));
 
         return null;
