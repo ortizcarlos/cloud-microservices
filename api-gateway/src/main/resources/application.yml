@@ -1,8 +1,8 @@
 zuul:
 #  ignoredServices: "*"
   prefix: /api
-  routes:
-    auth: /auth/**
+#  routes:
+#    auth: /auth/**
 
   
 server:

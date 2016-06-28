@@ -27,8 +27,13 @@ public class GatewayApp {
         SpringApplication.run(GatewayApp.class, args);
     }
 
-    @Bean
-    public Filter shallowEtagHeaderFilter() {
+    //@Bean
+    /*public Filter shallowEtagHeaderFilter() {
         return new ShallowEtagHeaderFilter();
+    }*/
+
+    @Bean
+    public JWTRequestFilter simpleFilter() {
+        return new JWTRequestFilter();
     }
 }
